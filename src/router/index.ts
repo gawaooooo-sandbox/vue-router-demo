@@ -28,6 +28,11 @@ const routes: Array<RouteConfig> = [
     component: () =>
       import(/* webpackChunkName: "profile" */ "../views/Profile.vue"),
   },
+  {
+    path: "*",
+    component: () =>
+      import(/* webpackChunkName: "Missing" */ "../views/Missing.vue"),
+  },
 ];
 
 const router = new VueRouter({
