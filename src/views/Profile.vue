@@ -2,9 +2,10 @@
   <div>
     <h3>My Profile</h3>
     <h4>{{ $route.params.id }}</h4>
-    <router-link :to="{ name: 'Profile', params: { id: 456 } }"
+    <router-link :to="{ name: 'Profile', query: { plan: 'private' } }"
       >Another Route</router-link
     >
+    <h5>{{ $route.query }}</h5>
     <p><button v-on:click="goBack">go back</button></p>
   </div>
 </template>

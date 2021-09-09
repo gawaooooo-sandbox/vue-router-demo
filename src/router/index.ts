@@ -20,6 +20,15 @@ const routes: Array<RouteConfig> = [
       import(/* webpackChunkName: "about" */ "../views/About.vue"),
   },
   {
+    path: "/profile",
+    name: "ProfileMain",
+    // route level code-splitting
+    // this generates a separate chunk (profile.[hash].js) for this route
+    // which is lazy-loaded when the route is visited.
+    component: () =>
+      import(/* webpackChunkName: "profile" */ "../views/Profile.vue"),
+  },
+  {
     path: "/profile/:id",
     name: "Profile",
     // route level code-splitting
